@@ -1,6 +1,6 @@
 package macpackage;
 
-public class Calculator extends Aritimetics {
+public class Calculator extends Aritimetics{
 	int d;
 	int add(int x,int y) {
 		System.out.println("From calculator");
@@ -16,9 +16,7 @@ public class Calculator extends Aritimetics {
 		Calculator cal=new Calculator();//only members in child class
 		calc.add(6, 5);
 		calc.greet();
-		
 	}
-
 }
 
 class Aritimetics{

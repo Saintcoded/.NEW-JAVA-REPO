@@ -1,54 +1,54 @@
 package macpackage;
 
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Attendant {
-	int k;
-	int n;
-	int t;
-	String move;
-
+	int k;// treshold
+	int n;// number of student
+	int t;// input
+	int p;
 	int count;
+	int tryal=0;
 
 	void meet(String times, String time) {
 
 		Scanner scan = new Scanner(System.in);
-
-		System.out.print("HOW MANY TEST CASES? ");
-		t = scan.nextInt();
+		
+			System.out.print("HOW MANY TEST CASES? ");
+			t = scan.nextInt();
+			
 		for (int i = 0; i != t; i++) {
-			String[] kk = times.split(" ");
-			n = Integer.parseInt(kk[0]);
+			n = Integer.parseInt(times.split(" ")[0]);
+			k = Integer.parseInt(times.split(" ")[1]);
+
 			String br[] = time.split(" ");
-			k = Integer.parseInt(br[0]);
-			System.out.println(k);
+			System.out.println(Arrays.toString(br));
 
-//			String input[] = new String[] { times + "" };
-//			System.out.println(Arrays.toString(input));
+			int go = 0;
+			while (go <= br.length) {
+				p = Integer.parseInt(br[go]);
 
-			for (int p = 0; p <= times.length(); p++) {
+				if (p <= 0)
+					count++;
 
-//				if (br[p] <= 0)
-//					count++;
+				go++;
 
+				if (go == br.length)
+					break;
 			}
-			System.out.println(count);
+			if (n != br.length || k > br.length)
+				System.err.println("STUDENTS && ATTENDEE'S NUMBER NOT CORESPONDING");
+			else
+				System.out.println(count >= k ? "THE CLASS WILL HOLD" : "THE CLASS HAS BEEN CANCELLED");
 
-			if (count >= times.toString().charAt(1))
-				move = "CLASS WILL HOLD";
-			else if (count <= times.toString().charAt(1))
-				move = "CLASS CANCELLED";
-			System.out.println(move.toString());
 		}
-
 	}
 
 	public static void main(String[] args) {
 		Attendant call = new Attendant();
-		call.meet("5 4", "-2 0 9 4 8");
-
+		call.meet("5 2", "-2 0 5 4 8");
+//		call.meet("5 3", "1");
 
 	}
 
