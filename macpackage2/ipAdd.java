@@ -19,8 +19,9 @@ public class ipAdd {
 			a = Integer.parseInt(address[i]);
 			if (a.toString().length() <= 3 && address.length == 4)
 				choice = true;
+			
 			i++;
-			if (a.toString().length() > 3 || address.length != 4) {
+			if (a.toString().length() > 3 || address.length != 4||a>255||a.toString().length()==0) {
 				choice = false;
 				break;
 			}
@@ -31,7 +32,7 @@ public class ipAdd {
 			System.err.println("INVALID IP ADDRESS!");
 
 		else if (choice == true)
-			System.out.println("IP ADDRESS " + addr + " FOUND" + "\nOWNER: ENIOLA");
+			System.out.println("IP ADDRESS " + addr + " FOUND");
 
 		return choice;
 
@@ -39,7 +40,9 @@ public class ipAdd {
 
 	public static void main(String[] args) {
 		ipAdd call = new ipAdd();
-		call.checkip("317.243.455.758.");
-		System.out.println("MR JIDE SAID \"MR UDOKA CANT HELP/\\ ASSIST HIMSELF\"");
+		call.checkip("..243.455");
+		call.checkip("117.13.41.158");
+		call.checkip("317.243.455.758");
+//		System.out.println("MR JIDE SAID \"MR UDOKA CANT HELP/\\ ASSIST HIMSELF\"");
 	}
 }
