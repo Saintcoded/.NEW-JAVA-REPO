@@ -5,16 +5,16 @@ import java.util.Arrays;
 
 public class Arred {
 
-//	void arr() {
-//		int[]nums= {13,34,55,54,77,231};
-//		
-//		int marks[];
-//		marks = new int[] { 13, 245, 66, 78, 44, 121 };
-//		marks[4]=45;
-////		System.out.println("array"+Arrays.toString(nums));
-//		System.out.println((marks.length));
-//		System.out.println((marks[4]));
-//	}
+	void arr() {
+		int[]nums= {13,34,55,54,77,231};
+		
+		int marks[];
+		marks = new int[] { 13, 245, 66, 78, 44, 121 };
+		marks[4]=45;
+		System.out.println("array"+Arrays.toString(nums));
+		System.out.println((marks.length));
+		System.out.println((marks[4]));
+	}
 
 	void acceptarray() {
 		Scanner scan = new Scanner(System.in);
@@ -28,11 +28,10 @@ public class Arred {
 		for (int i = 1; i <= input; i++) {
 			System.out.print("COURSE NAME " + i + ":" + "\n");
 			course[i - 1]  = scan.next().toUpperCase();
-//			course[i - 1] = Course;
 
 			System.out.print("SCORE FOR " + course[i - 1] + ":");
 			scores[i - 1] = scan.nextInt();
-//			scores[i - 1] = score;
+			
 
 			if (i >= input) {
 				System.out.println("SCORE OBTAINED FOR "+ course[i]+" IS:" + (scores[0]));

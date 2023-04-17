@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Attendant {
-	int k;// treshold
+	int k;// Threshold
 	int n;// number of student
 	int t;// input
 	int p;
