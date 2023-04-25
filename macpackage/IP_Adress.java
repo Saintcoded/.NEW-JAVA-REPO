@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class IP_Adress {
 	Integer a, b, c, d;
 
+
 	boolean checkip(String ip) {
 		boolean choice = false;
 
