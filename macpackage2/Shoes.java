@@ -1,47 +1,75 @@
 package macpackage2;
 
-class Walking  {
-	public final boolean goretex;
-
-	Walking(boolean goretex) {
-		this.goretex = goretex;
-		System.out.println(this.goretex); 
-		 
-
-	}
-}
-
-class Running extends Walking{
+class Running {
 	public final double weight;
 
 	Running(double weight) {
-		super(true);
-		
 		this.weight = weight;
-		System.out.println(weight);
-
 	}
 }
 
+class Walking extends Running {
+	public final boolean goretex;
 
-public class Shoes extends Running {
+	Walking(boolean goretex) {
+		super(3.5);
+		this.goretex = goretex;
+	}
+}
+
+public class Shoes extends Walking {
 	public final String brand;
 	public final double size;
 
 	Shoes(String brand, double size) {
-		super(size);
+		super(true);
+
 		this.brand = brand;
 		this.size = size;
-		System.out.println(brand);
-		System.out.println(size);
+		System.out.print(brand + " " + "size: " + size + " ");
+
+		if (brand == "Nike") {
+			Walking call = new Walking(false);
+			if (call.goretex == call.goretex) {
+				System.out.print("   " + " ");
+			}
+			Running cal = new Running(250);
+			System.out.println(cal.weight);
+		}
+
+		if (brand == "Hanwag") {
+			Walking call = new Walking(true);
+			if (call.goretex == call.goretex) {
+				System.out.print("Gore-Tex" + " \n");
+			}
+			Running cal = new Running(250);
+		}
+
+		if (brand == "Merrel") {
+			Walking call = new Walking(false);
+			if (call.goretex == call.goretex) {
+				System.out.print("No Gore-Tex" + " \n");
+			}
+			Running cal = new Running(250);
+		}
 
 	}
 
 	public static void main(String[] args) {
-		Shoes call = new Shoes("Nike", 34.5);
-		Shoes cal = new Shoes("puma", 33.5);
-		Shoes ca = new Shoes("Addidas", 35);
+		String sho;
+		double si;
+		for (int i = 0; i < 3; i++) {
+			String shh[] = { "Nike", "Hanwag", "Merrel" };
+			double siz[] = { 43, 43.5, 42 };
+			si = siz[i];
+			sho = shh[i];
+			Shoes call = new Shoes(sho, si);
 
+//			Walking wk = new Walking(true);
+			
+//		 Shoes	arr [] = {wk};
+			
+		}
 	}
 
 }

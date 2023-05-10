@@ -31,6 +31,7 @@ public class Hangman {
 	}
 	void Playing(String option) {
 		Scanner sc= new Scanner(System.in);
+		
 		if (option=="yes")
 			System.out.println("Welcome to Hangman Game your life is on the line");
 		

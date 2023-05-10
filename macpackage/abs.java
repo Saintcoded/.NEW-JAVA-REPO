@@ -6,7 +6,9 @@ interface abs {
 	public int size2=9;
 	int siz2e=9;
 	
-	public abstract void display();
+	public abstract void display();//concrete methods contains static or default an interface method is abstract by default
+	
+	
 	
 	
 
